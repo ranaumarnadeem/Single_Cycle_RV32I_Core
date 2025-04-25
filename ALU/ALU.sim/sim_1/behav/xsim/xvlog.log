@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/ALU/ALU.srcs/sim_1/new/ALU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_tb

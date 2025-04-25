@@ -1,0 +1,8 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+D:/Single_Cycle_RV32I_Core/ALU/ALU.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+D:/Single_Cycle_RV32I_Core/ALU/ALU.srcs/sim_1/new/ALU_tb.v,1745573433,verilog,,,,alu_tb,,,,,,,,
+D:/Single_Cycle_RV32I_Core/alu.v,1745569992,verilog,,D:/Single_Cycle_RV32I_Core/ALU/ALU.srcs/sim_1/new/ALU_tb.v,,alu,,,,,,,,
+D:/Single_Cycle_RV32I_Core/alu_control_unit.v,1745569992,verilog,,D:/Single_Cycle_RV32I_Core/ALU/ALU.srcs/sim_1/new/ALU_tb.v,,alu_control_unit,,,,,,,,
