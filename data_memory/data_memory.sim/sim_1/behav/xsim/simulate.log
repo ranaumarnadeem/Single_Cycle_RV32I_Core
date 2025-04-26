@@ -1,0 +1,8 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+Read data (LB) = ffffffa5
+Read data (LH) = 00005678
+Read data (LW) = deadbeef
+Read data (LBU) = 000000ef
+Read data (LHU) = 0000beef
+$finish called at time : 130 ns : File "D:/Single_Cycle_RV32I_Core/data_memory/data_memory.srcs/sim_1/new/data_memory_tb.v" Line 91

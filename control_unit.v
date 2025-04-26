@@ -6,7 +6,8 @@ module control_unit (
     output reg        MemWrite,
     output reg        MemToReg,
     output reg        Branch,
-    output reg [1:0]  ALUOp
+    output reg [1:0]  ALUOp,
+    output reg        Jump          // For JAL and JALR
 );
 
     always @(*) begin
@@ -18,6 +19,7 @@ module control_unit (
         MemToReg  = 0;
         Branch    = 0;
         ALUOp     = 2'b00;
+        Jump      = 0;
 
         case (opcode)
             7'b0110011: begin // R-type
@@ -32,7 +34,7 @@ module control_unit (
                 ALUOp     = 2'b10;
             end
 
-            7'b0000011: begin // lw
+            7'b0000011: begin // Load 
                 RegWrite  = 1;
                 ALUSrc    = 1;
                 MemRead   = 1;
@@ -40,30 +42,44 @@ module control_unit (
                 ALUOp     = 2'b00;
             end
 
-            7'b0100011: begin // sw
+            7'b0100011: begin // Store 
                 RegWrite  = 0;
                 ALUSrc    = 1;
                 MemWrite  = 1;
                 ALUOp     = 2'b00;
             end
 
-            7'b1100011: begin // beq, bne
+            7'b1100011: begin // Branch 
                 RegWrite  = 0;
                 ALUSrc    = 0;
                 Branch    = 1;
                 ALUOp     = 2'b01;
             end
 
-            7'b0110111: begin // LUI
+            7'b1101111: begin // JAL 
                 RegWrite  = 1;
-                ALUSrc    = 1;
-                ALUOp     = 2'b10; // Treat similar to I-type
+                ALUSrc    = 0;  // PC-relative
+                Jump      = 1;
+                ALUOp     = 2'b00;
             end
 
-            7'b0010111: begin // AUIPC
+            7'b1100111: begin // JALR 
+                RegWrite  = 1;
+                ALUSrc    = 1;  // rs1 + imm
+                Jump      = 1;
+                ALUOp     = 2'b00;
+            end
+
+            7'b0110111: begin // LUI 
                 RegWrite  = 1;
                 ALUSrc    = 1;
-                ALUOp     = 2'b10;
+                ALUOp     = 2'b11; 
+            end
+
+            7'b0010111: begin
+                RegWrite  = 1;
+                ALUSrc    = 1;
+                ALUOp     = 2'b11; 
             end
 
             default: begin

@@ -15,11 +15,11 @@ module register_file (
     // Read
     assign read_data1 = (rs1 != 0) ? regs[rs1] : 32'b0;
     assign read_data2 = (rs2 != 0) ? regs[rs2] : 32'b0;
-
+integer i;
     // Write on positive edge
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            integer i;
+            
             for (i = 0; i < 32; i = i + 1)
                 regs[i] <= 32'b0;
         end else if (reg_write && (rd != 0)) begin

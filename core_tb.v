@@ -73,7 +73,7 @@ module core_tb;
 
         // End the simulation after a few cycles
         #1000;  // Run simulation for 1000ns (100 clock cycles)
-        $finish;
+        
     end
 
 endmodule

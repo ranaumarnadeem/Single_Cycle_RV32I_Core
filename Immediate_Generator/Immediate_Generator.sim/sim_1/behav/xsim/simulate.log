@@ -1,0 +1,11 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+Starting imm_generator testbench...
+I-type (ADDI) positive: instr = 0a500013, imm_out = 000000a5
+I-type (ADDI) negative: instr = f2200013, imm_out = ffffff22
+S-type (SW): instr = 120001a3, imm_out = 00000123
+B-type (Branch): instr = 000003e3, imm_out = 00000806
+U-type (LUI): instr = e6f00037, imm_out = e6f00000
+U-type (AUIPC): instr = 19080017, imm_out = 19080000
+J-type (JAL): instr = 02aaaaef, imm_out = 000aa02a
+$finish called at time : 70 ns : File "D:/Single_Cycle_RV32I_Core/Immediate_Generator/Immediate_Generator.srcs/sim_1/new/imm_generator_tb.v" Line 93

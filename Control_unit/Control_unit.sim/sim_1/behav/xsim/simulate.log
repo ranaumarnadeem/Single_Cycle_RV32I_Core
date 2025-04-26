@@ -1,0 +1,14 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+=== Control Unit Test ===
+Opcode = 0110011 | RegWrite = 1 | ALUSrc = 0 | MemRead = 0 | MemWrite = 0 | MemToReg = 0 | Branch = 0 | Jump = 0 | ALUOp = 10
+Opcode = 0010011 | RegWrite = 1 | ALUSrc = 1 | MemRead = 0 | MemWrite = 0 | MemToReg = 0 | Branch = 0 | Jump = 0 | ALUOp = 10
+Opcode = 0000011 | RegWrite = 1 | ALUSrc = 1 | MemRead = 1 | MemWrite = 0 | MemToReg = 1 | Branch = 0 | Jump = 0 | ALUOp = 00
+Opcode = 0100011 | RegWrite = 0 | ALUSrc = 1 | MemRead = 0 | MemWrite = 1 | MemToReg = 0 | Branch = 0 | Jump = 0 | ALUOp = 00
+Opcode = 1100011 | RegWrite = 0 | ALUSrc = 0 | MemRead = 0 | MemWrite = 0 | MemToReg = 0 | Branch = 1 | Jump = 0 | ALUOp = 01
+Opcode = 1101111 | RegWrite = 1 | ALUSrc = 0 | MemRead = 0 | MemWrite = 0 | MemToReg = 0 | Branch = 0 | Jump = 1 | ALUOp = 00
+Opcode = 1100111 | RegWrite = 1 | ALUSrc = 1 | MemRead = 0 | MemWrite = 0 | MemToReg = 0 | Branch = 0 | Jump = 1 | ALUOp = 00
+Opcode = 0110111 | RegWrite = 1 | ALUSrc = 1 | MemRead = 0 | MemWrite = 0 | MemToReg = 0 | Branch = 0 | Jump = 0 | ALUOp = 11
+Opcode = 0010111 | RegWrite = 1 | ALUSrc = 1 | MemRead = 0 | MemWrite = 0 | MemToReg = 0 | Branch = 0 | Jump = 0 | ALUOp = 11
+Opcode = 1111111 | RegWrite = 0 | ALUSrc = 0 | MemRead = 0 | MemWrite = 0 | MemToReg = 0 | Branch = 0 | Jump = 0 | ALUOp = 00
+$finish called at time : 100 ns : File "D:/Single_Cycle_RV32I_Core/Control_unit/Control_unit.srcs/sim_1/new/Control_Unit_tb.v" Line 66

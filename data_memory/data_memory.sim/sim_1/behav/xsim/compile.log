@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/data_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/data_memory/data_memory.srcs/sim_1/new/data_memory_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_memory_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/data_memory/data_memory.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

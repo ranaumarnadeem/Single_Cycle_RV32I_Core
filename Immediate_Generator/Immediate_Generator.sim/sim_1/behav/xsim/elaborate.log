@@ -1,0 +1,14 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/xillinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 4ead987e6fac4ec99cf99eb81394cc08 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_imm_generator_behav xil_defaultlib.tb_imm_generator xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Single_Cycle_RV32I_Core/imm_generator.v" Line 1. Module imm_generator doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.imm_generator
+Compiling module xil_defaultlib.tb_imm_generator
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_imm_generator_behav

@@ -1,0 +1,10 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/xillinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 66cfca0f61974003acf27a21721c6500 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot core_tb_behav xil_defaultlib.core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2063] Module <alu_control> not found while processing module instance <alu_ctrl_unit> [D:/Single_Cycle_RV32I_Core/core.v:83]
+ERROR: [VRFC 10-2063] Module <mux> not found while processing module instance <alu_src_mux> [D:/Single_Cycle_RV32I_Core/core.v:91]
+ERROR: [VRFC 10-2063] Module <alu> not found while processing module instance <alu_inst> [D:/Single_Cycle_RV32I_Core/core.v:98]
+ERROR: [VRFC 10-2063] Module <data_memory> not found while processing module instance <data_mem> [D:/Single_Cycle_RV32I_Core/core.v:107]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

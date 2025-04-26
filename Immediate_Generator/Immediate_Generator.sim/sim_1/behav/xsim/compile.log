@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/imm_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module imm_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/Immediate_Generator/Immediate_Generator.srcs/sim_1/new/imm_generator_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_imm_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/Immediate_Generator/Immediate_Generator.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
