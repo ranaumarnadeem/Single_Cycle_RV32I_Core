@@ -1,12 +1,12 @@
 module alu (
     input  wire [31:0] a,           // First operand
     input  wire [31:0] b,           // Second operand
-    input  wire [3:0]  alu_ctrl,    // ALU operation control
-    output reg  [31:0] result,      // ALU result
-    output wire        zero         // Zero flag 
+    input  wire [3:0]  alu_ctrl,    
+    output reg  [31:0] result,      
+    output wire        zero          
 );
 
-    // Zero flag
+    
     assign zero = (result == 0);
 
     always @(*) begin

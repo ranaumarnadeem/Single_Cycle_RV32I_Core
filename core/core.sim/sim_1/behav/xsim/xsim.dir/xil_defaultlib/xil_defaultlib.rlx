@@ -2,7 +2,7 @@
 2018.2
 Jun 14 2018
 20:41:02
-D:/Single_Cycle_RV32I_Core/PC.v,1744259173,verilog,,D:/Single_Cycle_RV32I_Core/mux.v,,pc,,,,,,,,
+D:/Single_Cycle_RV32I_Core/PC.v,1750140812,verilog,,D:/Single_Cycle_RV32I_Core/mux.v,,pc,,,,,,,,
 D:/Single_Cycle_RV32I_Core/adder.v,1749711768,verilog,,D:/Single_Cycle_RV32I_Core/PC.v,,adder,,,,,,,,
 D:/Single_Cycle_RV32I_Core/alu.v,1750139024,verilog,,D:/Single_Cycle_RV32I_Core/control_unit.v,,alu,,,,,,,,
 D:/Single_Cycle_RV32I_Core/alu_control_unit.v,1750138968,verilog,,D:/Single_Cycle_RV32I_Core/alu.v,,alu_control_unit,,,,,,,,

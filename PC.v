@@ -7,7 +7,7 @@ module pc (
 
     always @(posedge clk or posedge reset) begin
         if (reset)
-            pc_current <= 32'b0;  // Reset to 0
+            pc_current <= 32'b0;  
         else
             pc_current <= pc_next; // Update PC
     end

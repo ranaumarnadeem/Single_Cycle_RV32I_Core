@@ -7,9 +7,7 @@ module instruction_memory (
     reg [31:0] memory [0:255];          // 1KB = 256 words x 4 bytes
 
     
-    initial begin
-        $readmemh("program.txt", memory); 
-    end
+
 
     // Word-aligned access (addr[1:0] ignored)
     assign instruction = memory[addr[9:2]];
