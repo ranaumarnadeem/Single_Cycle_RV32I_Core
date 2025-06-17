@@ -1,11 +1,11 @@
+
 module core (
     input  wire        clk,
-    input  wire        reset
+    input  wire        reset,
+    output wire [31:0] pc_current,
+    output wire [31:0] instruction
 );
-
-    
-    wire [31:0] pc_current, pc_next, pc_plus4;
-    wire [31:0] instruction;
+    wire [31:0]  pc_next, pc_plus4;
 
     wire [6:0]  opcode = instruction[6:0];
     wire [4:0]  rd     = instruction[11:7];
@@ -43,7 +43,8 @@ module core (
     );
 
     //  Instruction Memory 
-    instruction_memory instr_mem (
+    instruction_memory instr_mem_inst (
+        .clk(clk),
         .addr(pc_current),
         .instruction(instruction)
     );
@@ -80,7 +81,7 @@ module core (
     );
 
     //  ALU Control 
-    alu_control alu_ctrl_unit (
+    alu_control_unit alu_ctrl_unit (
         .alu_op(ALUOp),
         .funct3(funct3),
         .funct7(funct7),
@@ -138,3 +139,7 @@ module core (
     );
 
 endmodule
+
+
+
+

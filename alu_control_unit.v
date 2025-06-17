@@ -23,8 +23,9 @@ module alu_control_unit (
                     4'b0011: alu_ctrl = 4'b1000; // SLTU / SLTIU
                     default: alu_ctrl = 4'b0000; 
                 endcase
-            end
-            default: alu_ctrl = 4'b0000; 
+end
+            2'b11: alu_ctrl = 4'b1111;
+                           default: alu_ctrl = 4'b0000;
         endcase
     end
 

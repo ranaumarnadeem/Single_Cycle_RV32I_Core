@@ -23,7 +23,7 @@ integer i;
             for (i = 0; i < 32; i = i + 1)
                 regs[i] <= 32'b0;
         end else if (reg_write && (rd != 0)) begin
-            regs[rd] <= write_data; // x0 is hardwired to 0
+            regs[rd] <= write_data; // x0
         end
     end
 

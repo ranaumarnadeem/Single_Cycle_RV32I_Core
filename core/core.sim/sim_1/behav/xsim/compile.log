@@ -1,0 +1,24 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/alu_control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/data_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/imm_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module imm_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/instruction_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instruction_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/register_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module core
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Single_Cycle_RV32I_Core/core_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module core_tb
