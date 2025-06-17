@@ -4,13 +4,13 @@ module data_memory (
     input  wire        MemWrite,
     input  wire [31:0] addr,
     input  wire [31:0] write_data,
-    input  wire [2:0]  funct3,        // To decide byte/half/word operation
+    input  wire [2:0]  funct3,        
     output reg  [31:0] read_data
 );
 
-    reg [7:0] memory [0:1023]; // 1KB memory (byte addressable)
+    reg [7:0] memory [0:1023]; // 1KB memory
 
-    wire [9:0] byte_addr = addr[9:0]; // 10-bit for 1KB addressing
+    wire [9:0] byte_addr = addr[9:0]; // 10-bit
 
     always @(*) begin
         if (MemRead) begin

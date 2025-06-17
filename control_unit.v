@@ -1,5 +1,5 @@
 module control_unit (
-    input  wire [6:0] opcode,         // Instruction[6:0]
+    input  wire [6:0] opcode,        
     output reg        RegWrite,
     output reg        ALUSrc,
     output reg        MemRead,
@@ -7,11 +7,11 @@ module control_unit (
     output reg        MemToReg,
     output reg        Branch,
     output reg [1:0]  ALUOp,
-    output reg        Jump          // For JAL and JALR
+    output reg        Jump         
 );
 
     always @(*) begin
-        // Default values
+       
         RegWrite  = 0;
         ALUSrc    = 0;
         MemRead   = 0;
