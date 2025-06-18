@@ -7,25 +7,23 @@ module alu_control_unit (
 
     always @(*) begin
         case (alu_op)
-            2'b00: alu_ctrl = 4'b0010; // For LW, SW, ADDI, etc
-            2'b01: alu_ctrl = 4'b0110; // For branches: SUB to compare
-            2'b10: begin // R-type or I-type logic/shift
-                case ({funct7[5], funct3})
-                    4'b0000: alu_ctrl = 4'b0010; // ADD or ADDI
-                    4'b1000: alu_ctrl = 4'b0110; // SUB
-                    4'b0111: alu_ctrl = 4'b0000; // AND / ANDI
-                    4'b0110: alu_ctrl = 4'b0001; // OR / ORI
-                    4'b0100: alu_ctrl = 4'b0011; // XOR / XORI
-                    4'b0001: alu_ctrl = 4'b0100; // SLL / SLLI
-                    4'b0101: alu_ctrl = 4'b0101; // SRL / SRLI
-                    4'b1101: alu_ctrl = 4'b1101; // SRA / SRAI
-                    4'b0010: alu_ctrl = 4'b0111; // SLT / SLTI
-                    4'b0011: alu_ctrl = 4'b1000; // SLTU / SLTIU
-                    default: alu_ctrl = 4'b0000; 
+            2'b00: alu_ctrl = 4'b0010; // LW, SW, ADDI
+            2'b01: alu_ctrl = 4'b0110; // Branch (SUB)
+            2'b10: begin               // R-type and I-type
+                case (funct3)
+                    3'b000: alu_ctrl = (funct7[5] == 1'b1) ? 4'b0110 : 4'b0010; // SUB/ADD
+                    3'b111: alu_ctrl = 4'b0000; // AND
+                    3'b110: alu_ctrl = 4'b0001; // OR
+                    3'b100: alu_ctrl = 4'b0011; // XOR
+                    3'b001: alu_ctrl = 4'b0100; // SLL
+                    3'b101: alu_ctrl = (funct7[5] == 1'b1) ? 4'b1101 : 4'b0101; // SRA/SRL
+                    3'b010: alu_ctrl = 4'b0111; // SLT
+                    3'b011: alu_ctrl = 4'b1000; // SLTU
+                    default: alu_ctrl = 4'b0000;
                 endcase
-end
-            2'b11: alu_ctrl = 4'b1111;
-                           default: alu_ctrl = 4'b0000;
+            end
+            2'b11: alu_ctrl = 4'b1111; // LUI (b << 12)
+            default: alu_ctrl = 4'b0000;
         endcase
     end
 

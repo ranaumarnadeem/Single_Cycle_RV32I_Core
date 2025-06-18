@@ -21,7 +21,7 @@ module alu (
             4'b1101: result = $signed(a) >>> b[4:0];           // SRA, SRAI (arithmetic)
             4'b0111: result = ($signed(a) < $signed(b)) ? 32'b1 : 32'b0; // SLT, SLTI (signed)
             4'b1000: result = (a < b) ? 32'b1 : 32'b0;         // SLTU, SLTIU (unsigned)
-            4'b1111: result = b << 12;
+            4'b1111: result = b;
             default: result = 32'b0;                           
         endcase
     end

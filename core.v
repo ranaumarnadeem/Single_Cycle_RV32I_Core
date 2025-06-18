@@ -1,10 +1,11 @@
-
 module core (
     input  wire        clk,
     input  wire        reset,
     output wire [31:0] pc_current,
-    output wire [31:0] instruction
+    output wire [31:0] instruction,
+    output wire [31:0] result
 );
+
     wire [31:0]  pc_next, pc_plus4;
 
     wire [6:0]  opcode = instruction[6:0];
@@ -20,6 +21,7 @@ module core (
     wire [31:0] imm;
     wire [31:0] read_data1, read_data2;
     wire [3:0]  alu_ctrl;
+    wire [31:0] alu_input1;
     wire [31:0] alu_input2;
     wire [31:0] alu_result;
     wire        zero_flag;
@@ -28,7 +30,8 @@ module core (
     wire [31:0] branch_target;
     wire        branch_taken;
 
-    // Program Counter
+    wire [31:0] x4; // Register x4 (a4) output
+
     pc pc_inst (
         .clk(clk),
         .reset(reset),
@@ -42,14 +45,12 @@ module core (
         .sum(pc_plus4)
     );
 
-    //  Instruction Memory 
     instruction_memory instr_mem_inst (
         .clk(clk),
         .addr(pc_current),
         .instruction(instruction)
     );
 
-    //  Control Unit
     control_unit ctrl (
         .opcode(opcode),
         .RegWrite(RegWrite),
@@ -61,7 +62,6 @@ module core (
         .ALUOp(ALUOp)
     );
 
-    //  Register File
     register_file reg_file (
         .clk(clk),
         .reset(reset),
@@ -71,16 +71,17 @@ module core (
         .write_data(write_back_data),
         .reg_write(RegWrite),
         .read_data1(read_data1),
-        .read_data2(read_data2)
+        .read_data2(read_data2),
+        .x4(x4) // expose register 4
     );
 
-    //  Immediate Generator
+    assign result = x4;
+
     imm_generator imm_gen (
         .instr(instruction),
         .imm_out(imm)
     );
 
-    //  ALU Control 
     alu_control_unit alu_ctrl_unit (
         .alu_op(ALUOp),
         .funct3(funct3),
@@ -88,7 +89,6 @@ module core (
         .alu_ctrl(alu_ctrl)
     );
 
-    //ALu
     mux #(32) alu_src_mux (
         .a(read_data2),
         .b(imm),
@@ -96,15 +96,17 @@ module core (
         .out(alu_input2)
     );
 
+    // for lui
+    assign alu_input1 = (ALUOp == 2'b11) ? 32'b0 : read_data1;
+
     alu alu_inst (
-        .a(read_data1),
+        .a(alu_input1),
         .b(alu_input2),
         .alu_ctrl(alu_ctrl),
         .result(alu_result),
         .zero(zero_flag)
     );
 
-    // Data Memory
     data_memory data_mem (
         .clk(clk),
         .MemRead(MemRead),
@@ -114,7 +116,6 @@ module core (
         .read_data(data_mem_out)
     );
 
-    //  Write Back MUX
     mux #(32) write_back_mux (
         .a(alu_result),
         .b(data_mem_out),
@@ -122,7 +123,6 @@ module core (
         .out(write_back_data)
     );
 
-    //Branch Logic
     adder branch_adder (
         .a(pc_current),
         .b(imm),
@@ -139,7 +139,3 @@ module core (
     );
 
 endmodule
-
-
-
-

@@ -5,20 +5,7 @@ Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "D:/Single_Cycle_RV32I_Core/core.v" Line 2. Module core doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Single_Cycle_RV32I_Core/PC.v" Line 1. Module pc doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Single_Cycle_RV32I_Core/adder.v" Line 1. Module adder doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Single_Cycle_RV32I_Core/instruction_memory.v" Line 1. Module instruction_memory doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Single_Cycle_RV32I_Core/control_unit.v" Line 1. Module control_unit doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Single_Cycle_RV32I_Core/register_file.v" Line 1. Module register_file doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Single_Cycle_RV32I_Core/imm_generator.v" Line 1. Module imm_generator doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Single_Cycle_RV32I_Core/alu_control_unit.v" Line 1. Module alu_control_unit doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Single_Cycle_RV32I_Core/mux.v" Line 1. Module mux doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Single_Cycle_RV32I_Core/alu.v" Line 1. Module alu doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Single_Cycle_RV32I_Core/data_memory.v" Line 1. Module data_memory doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Single_Cycle_RV32I_Core/mux.v" Line 1. Module mux doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Single_Cycle_RV32I_Core/adder.v" Line 1. Module adder doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Single_Cycle_RV32I_Core/mux.v" Line 1. Module mux doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4100] "D:/Single_Cycle_RV32I_Core/core/core.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.pc
